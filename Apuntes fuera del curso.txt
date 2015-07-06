@@ -27,3 +27,87 @@ h1, h2, p {
     text-align: center;
     color: red;
 }
+
+backgrounds
+
+Existen diferentes tipos de background:
+
+background-color
+background-image
+background-repeat
+background-attachment
+background-position
+
+Usar una imagen como background
+
+body{
+	background-image: url("paper.gif");
+}
+
+repetir horizontal y verticalmente una imagen
+
+body {
+    background-image: url("gradient_bg.png");
+    background-repeat: repeat-x;
+}
+
+para repetir verticalmente se ocupa repeat-y, aunque por default es x
+
+para no repetirla se ocupa
+    background-repeat: no-repeat;
+
+se puede usar la propiedad background-position para pocicionar la imagen de background
+
+background-position: right bottom;
+background-position: left bottom;
+background-position: right top;
+background-position: left top;
+background-position: center;
+
+background-attachment
+
+sirve para ver que acción hará la imagen como background
+
+la diferencia se da cuando se pone background-attachment: fixed;
+
+se queda la imágen de background aún cuando el scrollbar baje
+
+
+atajo de background-image o shorthand porperty:
+
+body {
+    background: #ffffff url("img_tree.png") no-repeat right top;
+}
+
+se definen en este orden
+
+background-color
+background-image
+background-repeat
+background-attachment
+background-position
+
+
+text-transform puede servir para cambiar entre mayúsculas y minúsculas el texto
+
+text-transform: uppercase;
+text-transform: lowercase;
+text-transform: capitalize; (para poner mayúscula primera letra de cada palabra)
+
+text-indent sirve para poner una sangría al principio de la primera línea de un texto
+esto con em, px, cm, ó %
+
+letter-spacing sirve para asignar el espacio entre las letras
+
+line-height sirve para asignar el espacio entre lineas
+
+word-spacing sirve para asignar el espacio entre palabras
+
+white-space: nowrap; sirve para quitar saltos de linea automaticos de texto
+
+siempre iniciar el body con font-size: 100%;
+
+font-variant: small-caps; se puede ocupar para crear mayusculas chicas en lugar de minusculas
+
+El shorthand de los font
+font: font-style font-variant font-weight font-size/line-height font-family;
