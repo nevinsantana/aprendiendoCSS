@@ -1,0 +1,29 @@
+se puede hacer referencia a un id desde css de la siguiente manera: HTML: <p id="mostrandoEjemplo">	CSS: p#mostrandoEjemplo{ ... }	Esto para hacer referencia al elemento HTML p y al id específico.
+
+Ni los class ni los id nunca se inician con números******
+
+Se pueden agrupar los selectores de elementos de la siguiente forma:
+
+En lugar de:
+
+h1 {
+    text-align: center;
+    color: red;
+}
+
+h2 {
+    text-align: center;
+    color: red;
+}
+
+p {
+    text-align: center;
+    color: red;
+}
+
+Se puede:
+
+h1, h2, p {
+    text-align: center;
+    color: red;
+}
