@@ -111,3 +111,288 @@ font-variant: small-caps; se puede ocupar para crear mayusculas chicas en lugar 
 
 El shorthand de los font
 font: font-style font-variant font-weight font-size/line-height font-family;
+
+
+los links pueden modificarse dependiendo de su estado:
+
+a:link
+a:visited
+a:hover
+a:active
+
+
+estilos para listas:
+
+ul.a {
+    list-style-type: circle;
+}
+
+ul.b {
+    list-style-type: square;
+}
+
+ol.c {
+    list-style-type: upper-roman;
+}
+
+ol.d {
+    list-style-type: lower-alpha;
+}
+
+
+para darle estilo a la lista con imágenes:
+
+ul {
+   list-style-image: url('sqpurple.gif');
+}
+
+
+Para unir bordes de tabla:
+
+
+table, th, td {
+   border: 1px solid black;
+  border-collapse: collapse;
+}
+
+outline en css es una linea más afuera de border, que funciona para resaltar los elementos.
+
+/*display*/ es el elemento más importante para asignar cono es que será mostrado el elemento en pantalla, con estos
+dos posibles resultados:
+
+/*block*/ siempre empieza en una nueva linea y toma toda la longitud disponible
+
+/*inline*/ sirve para introducir el elemento en la misma linea y únicamente toma la longitud necesaria
+
+/*none*/ funciona para no aparecer el elemento, sirve para transiciones de JavaScript
+
+
+
+/*position*/ existen:
+
+static: posición dependiendo fluir del código, no tomara el css como referencia
+relative: tomara los valores del css como referencia de su posición
+fixed
+absolute
+
+
+todos los /*cursor*/
+
+<span style="cursor:auto">auto</span><br>
+<span style="cursor:crosshair">crosshair</span><br>
+<span style="cursor:default">default</span><br>
+<span style="cursor:e-resize">e-resize</span><br>
+<span style="cursor:help">help</span><br>
+<span style="cursor:move">move</span><br>
+<span style="cursor:n-resize">n-resize</span><br>
+<span style="cursor:ne-resize">ne-resize</span><br>
+<span style="cursor:nw-resize">nw-resize</span><br>
+<span style="cursor:pointer">pointer</span><br>
+<span style="cursor:progress">progress</span><br>
+<span style="cursor:s-resize">s-resize</span><br>
+<span style="cursor:se-resize">se-resize</span><br>
+<span style="cursor:sw-resize">sw-resize</span><br>
+<span style="cursor:text">text</span><br>
+<span style="cursor:w-resize">w-resize</span><br>
+<span style="cursor:wait">wait</span><br>
+
+
+/*display: inline-block*/ funciona para posicionar elementos en una linea dependiendo del tamaño de la ventana, si caben
+más elementos, se colocaran más.
+
+/*margin: auto;*/ en lugar de margin: 0 auto; para centrar elementos
+
+
+
+/*Combinadores*/
+
+Selector descendiente*/
+
+div p {
+}
+
+Selecciona todos los elementos p dentro de los elementos div
+
+
+Selector de child's/*
+
+div > p {
+}
+
+Selecciona todos los elementos p que son child directamente de p, es decir, que si hay otro elemento de por medio.
+no lo seleccionará, (únicamente si es un elemento html)
+
+
+Selector de hermanos adyacentes*/
+
+div + p {
+}
+
+Selecciona todos (ó el) elementos p que esten enseguida de que el div sea terminado.
+
+
+
+Selector de hermanos general*/
+
+div ~ p {
+}
+
+Selecciona todos los elementos p que estén después de terminar el div
+
+/**************En chrome****************/ para quitar el borde de color al hacer focus, se ocupa un outline: 0; en
+input:focus
+
+
+/************Image sprites************/
+
+Sirve para ahorrar espacio y no poner tantas imágenes en una sola página:
+
+el css:
+#zero {
+  margin-top: 10px;
+  width: 50px;
+  height: 50px;
+  background: url(zero.gif) 1px -5px;
+}
+
+el html:
+<a href="ghht.html"><img id="zero" src="ejemplo.png" alt="Zero pose 1" />
+
+Se tiene que poner una imágen transparente en src de img, src no puede ir vacío
+
+
+Seleccionar elementos dependiendo del valor que tengan, por ejemplo:
+
+input[type="text"] {
+}
+
+ó
+
+input[type="number"]
+
+
+Se pueden introducir imagenes para que formen un borde, por ejemplo:
+
+#borderimg {
+    border: 10px solid transparent;
+    padding: 15px;
+    -webkit-border-image: url(border.png) 30 round; /* Safari 3.1-5 */
+    -o-border-image: url(border.png) 30 round; /* Opera 11-12.1 */
+    border-image: url(border.png) 30 round;
+}
+
+Ó también:
+
+#borderimg {
+    border: 10px solid transparent;
+    padding: 15px;
+    -webkit-border-image: url(border.png) 30 round; /* Safari 3.1-5 */
+    -o-border-image: url(border.png) 30 round; /* Opera 11-12.1 */
+    border-image: url(border.png) 30 round;
+}
+
+
+
+Se puede poner dos o más imágenes como background:
+
+#example1 {
+    background-image: url(img_flwr.gif), url(paper.gif);
+    background-position: right bottom, left top;
+    background-repeat: no-repeat, repeat;
+}
+
+
+
+Para definir el tamaño de varias imagenes como background:
+
+#example1 {
+    background: url(img_flwr.gif) left top no-repeat, url(img_flwr.gif) right bottom no-repeat,
+    url(paper.gif) left top repeat;
+    background-size: 50px, 130px, auto;
+}
+
+#example1 {
+    border: 10px solid black;
+    padding:35px;
+    background:url(img_flwr.gif);
+    background-repeat: no-repeat;
+    background-origin: content-box;
+}
+
+Define color opacidad:
+
+rgba(255, 0, 0, 0.2);
+
+
+
+/************Para crear gradientes*************/
+
+Lineales:
+De arriba a abajo:
+background: linear-gradient(purple, yellow); 
+
+De derecha a izquierda:
+background: linear-gradient(to right, red , blue);
+
+En diagonal:
+background: linear-gradient(to bottom right, red , blue);
+
+Usando ángulos:
+background: linear-gradient(180deg, red, blue);
+
+Usando transparencia:
+background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+
+Repitiendo el gradiente:
+background: repeating-linear-gradient(red, yellow 10%, green 20%);
+
+
+Gradientes radiales:
+background: radial-gradient(red, green, blue);
+
+Asignando tamaño a cada color:
+background: radial-gradient(black 1%, green 50%, white 100%);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
