@@ -353,20 +353,83 @@ background: radial-gradient(red, green, blue);
 Asignando tamaño a cada color:
 background: radial-gradient(black 1%, green 50%, white 100%);
 
+Se pueden crear varias sombras para text-shadow y box-shadow:
+
+text-shadow: 2px 2px 2px blue, 4px 5px 10px green;
 
 
 
 
+/************CSS3 para texto***************/
+
+La propiedad overflow: hidden; junto con text-overflow: ya sea clip o ellipsis; logran que si el texto dentro de una caja
+se desborda, crea un efecto de quedarse hasta la palabra en que se pueda quedar o colocando ...
+
+
+Es una buena idea mostrar el texto escondido con un hover y un overflow: visible;
+
+
+word-wrap: break-word;  Funciona para cortar palabras demasiado extensas y que no se salgan del de su contenedor
+
+Tambien se puede ocupar:
+
+p.test1 {
+    width: 140px; 
+    border: 1px solid #000000;
+    word-break: keep-all;
+}
+
+p.test2 {
+    width: 140px; 
+    border: 1px solid #000000;
+    word-break: break-all;
+}
 
 
 
+/**************Agregar estilos de letra propios con archivo***************/
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(sansation_light.woff);
+}
+
+div {
+    font-family: myFirstFont;
+}
 
 
+/********Transforms de CSS3*******/
+
+transform: translate(50px, 100px);
+
+transform: rotate(20deg); ó transform: rotate(-20deg);
+
+transform: scale(2, 3); ó transform: scale(0.5, 0.5);
+
+transform: skewX(20deg); ó transform: skewX(-20deg);
+
+transform: skewY(20deg); ó transform: skewY(-20deg);
+
+transform: skew(20deg,10deg); ó transform: skew(-20deg,-10deg);
 
 
+/**********Transforms en 3D**********/
+transform: rotateX(150deg);
 
+transform: rotateY(130deg);
 
+transform: rotateZ(90deg);
 
+/*******transition propertys******/
+
+#div1 {transition-timing-function: linear;}
+#div2 {transition-timing-function: ease;}
+#div3 {transition-timing-function: ease-in;}
+#div4 {transition-timing-function: ease-out;}
+#div5 {transition-timing-function: ease-in-out;}
+
+transition-delay: 1s;
 
 
 
