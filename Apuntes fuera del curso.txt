@@ -434,6 +434,11 @@ transition-delay: 1s;
 
 
 
+/**************Animaciones en CSS**************/
+
+
+
+
 
 
 
